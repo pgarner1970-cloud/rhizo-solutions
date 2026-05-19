@@ -573,3 +573,91 @@ footer{
     grid-template-columns:1fr;
   }
 }
+
+
+/* Artistic overlapping image collage */
+.image-collage{
+  position:relative;
+  display:block;
+  width:100%;
+  max-width:650px;
+  min-height:650px;
+  padding:20px 0;
+}
+
+.image-collage .collage-card{
+  position:absolute;
+  margin:0;
+  border-radius:34px;
+  overflow:hidden;
+  box-shadow:0 28px 70px rgba(15,23,42,.20);
+  background:#fff;
+}
+
+.image-collage .collage-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:34px;
+  margin:0;
+  transform:none;
+}
+
+.collage-golf{
+  width:48%;
+  height:330px;
+  left:0;
+  top:10px;
+  z-index:2;
+}
+
+.collage-wheat{
+  width:55%;
+  height:350px;
+  right:0;
+  top:70px;
+  z-index:4;
+}
+
+.collage-rootzone{
+  width:50%;
+  height:310px;
+  left:8%;
+  top:340px;
+  z-index:3;
+}
+
+.collage-crop{
+  width:52%;
+  height:300px;
+  right:4%;
+  top:385px;
+  z-index:1;
+}
+
+@media(max-width:980px){
+  .image-collage{
+    max-width:720px;
+    min-height:620px;
+    margin:0 auto;
+  }
+}
+
+@media(max-width:680px){
+  .image-collage{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    min-height:0;
+    padding:0;
+  }
+
+  .image-collage .collage-card{
+    position:relative;
+    width:100%;
+    height:260px;
+    left:auto;
+    right:auto;
+    top:auto;
+  }
+}
